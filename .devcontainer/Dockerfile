@@ -1,6 +1,9 @@
-# 使用官方 ROS 2 Humble 桌面版镜像
-FROM osrf/ros:humble-desktop-full
-
+# 使用 ROS 2 Humble 桌面版镜像
+FROM elainasuki/ros:ros2-humble-full-v2
+# 定义用户和用户组
+ARG USERNAME=Elaina
+ARG USER_UID=1000
+ARG USER_GID=$USER_UID
 # 安装基础工具
 RUN apt-get update && apt-get install -y \
     git \
